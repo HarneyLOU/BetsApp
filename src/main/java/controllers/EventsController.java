@@ -177,6 +177,7 @@ public class EventsController {
 		});
 		
 		new Thread(createTask()).start();
+		setUpTableView();
 		addGamesTableListener();
 	}
 	
@@ -310,7 +311,6 @@ public class EventsController {
 		 return new Task<Void>() {
 		        @Override
 		        protected Void call() throws Exception {
-		        	setUpTableView();
 		        	populateTableView();
 		            return null;
 		        }
@@ -318,8 +318,6 @@ public class EventsController {
 	 };
 
 	private void setUpTableView() {
-		data.clear();
-
 		idColumn.setCellValueFactory(new PropertyValueFactory<GameView, Integer>("gameId"));
 		categoryColumn.setCellValueFactory(cellData -> cellData.getValue().getCategoryProperty());
 		team1Column.setCellValueFactory(new PropertyValueFactory<GameView, String>("firstName"));
@@ -346,6 +344,8 @@ public class EventsController {
 						return true;
 					} else if (game.getSecondName().toLowerCase().contains(filterField.getText())) {
 						return true;
+					} else if (game.getCategory().toLowerCase().contains(filterField.getText())) {
+						return true;
 					}
 					return false;
 				}
@@ -370,6 +370,7 @@ public class EventsController {
 	}
 	
 	private void populateTableView() {
+		data.clear();
 		List<Game> games = gameDao.getAll();
 
     	Platform.runLater(() -> {
@@ -382,9 +383,9 @@ public class EventsController {
 		for (Game game : games) {
 			data.add(gameToGameView(game));
 		}
-		
+		Platform.runLater(() -> {
 		gamesTable.setPlaceholder(new Label("No data found"));
-
+		});
 	}
 
 	@FXML
