@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="homePane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
+   <children>
+      <VBox id="Nav" alignment="TOP_CENTER" prefHeight="510.0" prefWidth="290.0" stylesheets="@../style.css">
+         <children>
+            <ImageView fitHeight="224.0" fitWidth="307.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/dice%20(1).png" />
+               </image>
+            </ImageView>
+            <Button id="Button" fx:id="eventsButton" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#showEvents" prefHeight="68.0" prefWidth="293.0" stylesheets="@../style.css" text="Events" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/gamepad-console.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="Button" fx:id="betsButton" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#showBets" prefHeight="68.0" prefWidth="293.0" stylesheets="@../style.css" text="Bets" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/park-tickets-couple.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="Button" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#showAbout" prefHeight="68.0" prefWidth="293.0" stylesheets="@../style.css" text="About" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="Button" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#exit" prefHeight="68.0" prefWidth="293.0" stylesheets="@../style.css" text="Exit" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/rubbish-bin-delete-button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</HBox>

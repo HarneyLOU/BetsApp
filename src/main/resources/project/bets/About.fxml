@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fx:id="aboutScrollPane" fitToHeight="true" fitToWidth="true" prefHeight="616.0" prefWidth="794.0" style="-fx-background-color: #00CF91;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <VBox alignment="CENTER" prefHeight="609.0" prefWidth="752.0" style="-fx-background-color: #64C8BD;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="BetsApp basic informations" textAlignment="CENTER">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <Label graphicTextGap="30.0" prefHeight="120.0" prefWidth="700.0" style="-fx-border-insets: 2px 2px 2px 2px;" text="Aplikacja wykonana w ramach zaliczenia projektu z przedmiotu Programowanie Zdarzeniowe&#10;&#10;Autor: Mateusz Krzyżanowski&#10;Grupa I7B5S1" textAlignment="CENTER" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/admin.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label graphicTextGap="30.0" prefHeight="139.0" prefWidth="700.0" style="-fx-border-insets: 2px 2px 2px 2px;" text=" Podstawowym założeniem działania aplikacji jest jej wykorzystanie przez osobę zajmującą się organizowaniem zakładów. Użytkownik ma możliwość dodania wydarzenia, takiego jak mecz, który potencjalni klienci będą mogli obstawić. Aplikacja zapisuje w bazie danych informacje o tych wydarzeniach i zakładach, dzięki czemu pozwala na sprawne zarządzanie nimi. " wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/customer-support%20(2).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+               <font>
+                  <Font name="System Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label graphicTextGap="30.0" prefHeight="125.0" prefWidth="700.0" style="-fx-border-insets: 2px 2px 2px 2px;" text="Wykorzystane technologie:&#10;GUI - JavaFX&#10;Interakcje z bazą danych - framework Hibernate&#10;Baza danych - MySQL" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/database.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label graphicTextGap="30.0" prefHeight="134.0" prefWidth="700.0" style="-fx-border-insets: 2px 2px 2px 2px;" text="Credits&#10;Icons made by smashicons, freepik, smalllikeart from www.flaticon.com" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/library.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="100.0" right="40.0" />
+         </padding>
+      </VBox>
+   </content>
+</ScrollPane>

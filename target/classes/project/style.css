@@ -1,0 +1,182 @@
+#Nav {
+	-fx-background-color: #004156;
+}
+
+#Button{
+	-fx-background-color: #004156;
+	-fx-text-fill: white;
+	-fx-font-size: 18pt;
+}
+
+#Button:hover{     
+	-fx-background-color: #AFCFEA;
+	-fx-text-fill: black;
+	-fx-font-size: 16pt;
+}
+
+#Button:focused{     
+	-fx-background-color: #7EB3FF;
+	-fx-text-fill: black;
+	-fx-font-size: 18pt;
+	-fx-font-weight: bold;
+}
+
+#AddButton{
+	-fx-background-color: #5199FF;
+	-fx-text-fill: white;
+	-fx-font-size: 24pt;
+}
+
+#AddButton:hover{     
+	-fx-background-color: #AFCFEA;
+	-fx-text-fill: black;
+	-fx-font-size: 28pt;
+}
+
+#AddButton:pressed{     
+	-fx-background-color: #7EB3FF;
+	-fx-text-fill: black;
+	-fx-font-size: 32pt;
+	-fx-font-weight: bold;
+}
+
+#EditButton{
+	-fx-background-color: #1771F1;
+	-fx-text-fill: white;
+	-fx-font-size: 24pt;
+}
+
+#EditButton:hover{     
+	-fx-background-color: #AFCFEA;
+	-fx-text-fill: black;
+	-fx-font-size: 28pt;
+}
+
+#EditButton:pressed{     
+	-fx-background-color: #7EB3FF;
+	-fx-text-fill: black;
+	-fx-font-size: 32pt;
+	-fx-font-weight: bold;
+}
+
+#DeleteButton{
+	-fx-background-color: #0260E8;
+	-fx-text-fill: white;
+	-fx-font-size: 24pt;
+}
+
+#DeleteButton:hover{     
+	-fx-background-color: #AFCFEA;
+	-fx-text-fill: black;
+	-fx-font-size: 28pt;
+}
+
+#DeleteButton:pressed{     
+	-fx-background-color: #7EB3FF;
+	-fx-text-fill: black;
+	-fx-font-size: 32pt;
+	-fx-font-weight: bold;
+}
+
+#AddCategoryButton{
+	-fx-background-color: #0043A4;
+	-fx-text-fill: white;
+	-fx-font-size: 12pt;
+}
+
+#AddCategoryButton:hover{     
+	-fx-background-color: #AFCFEA;
+	-fx-text-fill: black;
+	-fx-font-size: 16pt;
+}
+
+#AddCategoryButton:pressed{     
+	-fx-background-color: #7EB3FF;
+	-fx-text-fill: black;
+	-fx-font-size: 20pt;
+	-fx-font-weight: bold;
+}
+
+#select1Button{
+	-fx-background-color: #0260E8;
+	-fx-text-fill: white;
+	-fx-font-size: 12pt;
+}
+
+#select1Button:hover{     
+	-fx-background-color: #AFCFEA;
+	-fx-text-fill: black;
+	-fx-font-size: 14pt;
+}
+
+#select1Button:pressed{     
+	-fx-background-color: #7EB3FF;
+	-fx-text-fill: black;
+	-fx-font-size: 16pt;
+	-fx-font-weight: bold;
+}
+
+#select2Button{
+	-fx-background-color: #EE3D48;
+	-fx-text-fill: white;
+	-fx-font-size: 12pt;
+}
+
+#select2Button:hover{     
+	-fx-background-color: #AFCFEA;
+	-fx-text-fill: black;
+	-fx-font-size: 14pt;
+}
+
+#select1Button:pressed{     
+	-fx-background-color: #7EB3FF;
+	-fx-text-fill: black;
+	-fx-font-size: 16pt;
+	-fx-font-weight: bold;
+}
+
+#selectDrawButton{
+	-fx-background-color: #939598;
+	-fx-text-fill: white;
+	-fx-font-size: 12pt;
+}
+
+#selectDrawButton:hover{     
+	-fx-background-color: #AFCFEA;
+	-fx-text-fill: black;
+	-fx-font-size: 14pt;
+}
+
+#selectDrawButton:pressed{     
+	-fx-background-color: #7EB3FF;
+	-fx-text-fill: black;
+	-fx-font-size: 16pt;
+	-fx-font-weight: bold;
+}
+
+.table-view{
+   -fx-background-color: transparent;
+}
+
+.table-view .column-header-background .label{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+
+}
+
+.table-view .column-header {
+	-fx-font-size: 12pt;
+    -fx-font-family: Arial;
+    -fx-background-color: #01142F;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: black;
+    -fx-font-size: 18pt;
+    -fx-font-family: Impact, Charcoal;
+    -fx-background-insets: 0, 0 0 0 0;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #FF756B;
+}

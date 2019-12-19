@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="betPane" prefHeight="251.0" prefWidth="691.0" style="-fx-background-color: #00CF91;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BetController">
+   <children>
+      <Label fx:id="betNumber" layoutX="140.0" layoutY="17.0" prefHeight="106.0" prefWidth="534.0" text="Your bet number " textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="112.0" fitWidth="120.0" layoutX="19.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/medical-history.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="eventNumber" layoutX="140.0" layoutY="95.0" text="Event number: ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="type" layoutX="140.0" layoutY="126.0" text="Type: ">
+         <font>
+            <Font name="Eras Bold ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="amount" layoutX="140.0" layoutY="151.0" text="Amount: ">
+         <font>
+            <Font name="Eras Bold ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="eventStatus" layoutX="375.0" layoutY="95.0" text="Event status: ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="odds" layoutX="375.0" layoutY="126.0" text="Odds: ">
+         <font>
+            <Font name="Eras Bold ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="possibleWin" layoutX="375.0" layoutY="151.0" text="Possible win: ">
+         <font>
+            <Font name="Eras Bold ITC" size="14.0" />
+         </font>
+      </Label>
+      <Button id="select2Button" layoutX="161.0" layoutY="184.0" mnemonicParsing="false" text="Generate PDF ticket">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button id="select1Button" layoutX="375.0" layoutY="183.0" mnemonicParsing="false" onAction="#signBet" prefHeight="38.0" prefWidth="87.0" text="Sign">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Label fx:id="date" layoutX="141.0" layoutY="14.0" text="Date:">
+         <font>
+            <Font name="Eras Bold ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="signed" layoutX="398.0" layoutY="13.0" prefHeight="38.0" prefWidth="273.0" text="PRIZE PAID OUT" textFill="#ac1212" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

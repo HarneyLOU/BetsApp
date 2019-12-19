@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fx:id="eventsScrollPane" fitToHeight="true" fitToWidth="true" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EventsController">
+   <content>
+      <HBox fx:id="eventsPane" prefHeight="617.0" prefWidth="936.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../style.css">
+         <children>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox maxHeight="130.0" minHeight="130.0" minWidth="100.0" prefHeight="130.0" prefWidth="936.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Button id="AddButton" fx:id="addEvent" graphicTextGap="20.0" maxWidth="1000.0" mnemonicParsing="false" onAction="#showAddingForm" prefHeight="130.0" prefWidth="206.0" text="Add event" HBox.hgrow="ALWAYS">
+                           <graphic>
+                              <ImageView fitHeight="52.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/add-plus-button.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="EditButton" fx:id="addBet" graphicTextGap="20.0" maxWidth="1000.0" mnemonicParsing="false" onAction="#showBettingForm" prefHeight="130.0" prefWidth="404.0" text="Bet" HBox.hgrow="ALWAYS">
+                           <graphic>
+                              <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/dice%20(2).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <VBox maxHeight="65.0" minHeight="0.0" prefHeight="0.0" prefWidth="271.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Button id="DeleteButton" graphicTextGap="20.0" maxHeight="65.0" maxWidth="1000.0" minHeight="65.0" mnemonicParsing="false" onAction="#deleteGame" prefHeight="65.0" prefWidth="244.0">
+                                 <graphic>
+                                    <ImageView fitHeight="52.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/rubbish-bin-delete-button.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button id="AddCategoryButton" fx:id="addCategory" graphicTextGap="20.0" maxHeight="66.0" maxWidth="1000.0" minHeight="65.0" mnemonicParsing="false" onAction="#addCategoryForm" prefHeight="66.0" prefWidth="241.0" text="Categories" wrapText="true">
+                                 <graphic>
+                                    <ImageView fitHeight="52.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/basketball-player-scoring.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <FlowPane hgap="30.0" vgap="20.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Group>
+                           <children>
+                              <TextField fx:id="filterField" layoutX="83.0" layoutY="34.0" prefHeight="36.0" prefWidth="182.0" promptText="Search..." />
+                              <ImageView fitHeight="68.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/open-book.png" />
+                                 </image>
+                              </ImageView>
+                              <CheckBox fx:id="updateCheckbox" layoutX="129.0" layoutY="9.0" mnemonicParsing="false" text="Not resolved" />
+                           </children>
+                        </Group>
+                        <Button id="select1Button" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#refreshTable" prefHeight="40.0" prefWidth="40.0">
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/refresh.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Group>
+                           <children>
+                              <Label layoutX="58.0" layoutY="4.0" text="Total event value">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="48.0" fitWidth="58.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../icons/betting.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="totalEventValueLabel" layoutX="81.0" layoutY="20.0" text="Not selected" />
+                           </children>
+                        </Group>
+                        <Group>
+                           <children>
+                              <Label layoutX="79.0" layoutY="7.0" text="Number of bets">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="numbersOfBetsLabel" layoutX="97.0" layoutY="23.0" text="Not selected" />
+                              <ImageView fitHeight="48.0" fitWidth="58.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../icons/post-it.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Group>
+                        <Group>
+                           <children>
+                              <HBox layoutY="27.0" maxWidth="1000.0" prefHeight="48.0" prefWidth="343.0">
+                                 <children>
+                                    <Button id="select1Button" fx:id="team1Button" disable="true" maxWidth="300.0" mnemonicParsing="false" onAction="#setWinner1" prefHeight="70.0" prefWidth="87.0" text="Select" HBox.hgrow="ALWAYS" />
+                                    <Button id="selectDrawButton" fx:id="drawButton" disable="true" maxWidth="300.0" mnemonicParsing="false" onAction="#setWinnerDraw" prefHeight="70.0" prefWidth="87.0" text="Draw" HBox.hgrow="ALWAYS" />
+                                    <Button id="select2Button" fx:id="team2Button" disable="true" maxWidth="300.0" mnemonicParsing="false" onAction="#setWinner2" prefHeight="70.0" prefWidth="87.0" text="Select" HBox.hgrow="ALWAYS" />
+                                    <Button id="selectDrawButton" fx:id="resetButton" disable="true" maxWidth="300.0" mnemonicParsing="false" onAction="#setWinnerReset" prefHeight="48.0" prefWidth="62.0" text="Reset" />
+                                 </children>
+                              </HBox>
+                              <Label layoutX="65.0" layoutY="1.0" prefHeight="18.0" prefWidth="150.0" text="Set the winner" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Group>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </FlowPane>
+                  <TableView id="Table" fx:id="gamesTable" minWidth="100.0" prefHeight="307.0" prefWidth="600.0" tableMenuButtonVisible="true" VBox.vgrow="ALWAYS">
+                    <columns>
+                      <TableColumn id="Column" fx:id="idColumn" editable="false" maxWidth="2500.0" prefWidth="73.60000306367874" text="Number" />
+                      <TableColumn id="Column" fx:id="categoryColumn" editable="false" prefWidth="135.20000839233398" style="-fx-font-size: 12pt;" text="Category" />
+                        <TableColumn id="Column" fx:id="team1Column" editable="false" prefWidth="84.00001525878906" text="Team 1" />
+                        <TableColumn fx:id="odds1Column" editable="false" prefWidth="129.5999755859375" text="Odds" />
+                        <TableColumn id="Column" fx:id="team2Column" editable="false" prefWidth="75.0" text="Team 2" />
+                        <TableColumn fx:id="odds2Column" editable="false" prefWidth="50.0" text="Odds" />
+                        <TableColumn fx:id="drawOddsColumn" editable="false" prefWidth="50.0" text="Draw odds" />
+                        <TableColumn fx:id="winnerColumn" editable="false" prefWidth="75.0" text="Winner" />
+                        <TableColumn fx:id="dateColumn" editable="false" prefWidth="200.0" style="-fx-font-size: 12pt;" text="Date" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </content>
+</ScrollPane>
